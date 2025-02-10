@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>ร้านหนังสือออนไลน์</title>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <script src="shopping_cart.js"></script> <!-- เชื่อมโยงกับไฟล์ shopping_cart.js -->
+</head>
+<body>
+
+<div class="w3-container" id="books">
+    <h3 class="w3-center">หนังสือที่เรามีให้บริการ</h3>
+    <div class="w3-row-padding">
+        <div class="w3-third">
+            <div class="w3-card">
+                <img src="book1.jpg" alt="Book 1" style="width:100%">
+                <div class="w3-container">
+                    <h4>ชื่อหนังสือ 1</h4>
+                    <p>รายละเอียดหนังสือ 1</p>
+                    <p>ราคา: 300 บาท</p>
+                    <button class="w3-button w3-black" onclick="addToCart('หนังสือ 1', 300)">เพิ่มไปยังตะกร้า</button>
+                </div>
+            </div>
+        </div>
+        <div class="w3-third">
+            <div class="w3-card">
+                <img src="book2.jpg" alt="Book 2" style="width:100%">
+                <div class="w3-container">
+                    <h4>ชื่อหนังสือ 2</h4>
+                    <p>รายละเอียดหนังสือ 2</p>
+                    <p>ราคา: 400 บาท</p>
+                    <button class="w3-button w3-black" onclick="addToCart('หนังสือ 2', 400)">เพิ่มไปยังตะกร้า</button>
+                </div>
+            </div>
+        </div>
+        <!-- เพิ่มหนังสือเพิ่มเติมที่นี่ -->
+    </div>
+</div>
+
+<!-- ปุ่มเพื่อดูตะกร้า -->
+<button class="w3-button w3-black" onclick="showCart()">ดูตะกร้า</button>
+
+<!-- โมดัลสำหรับแสดงตะกร้า -->
+<div id="cartModal" class="w3-modal">
+    <div class="w3-modal-content w3-animate-top">
+        <div class="w3-container">
+            <span onclick="document.getElementById('cartModal').style.display='none'" class="w3-button w3-display-topright">&times;</span>
+            <h3>ตะกร้าสินค้า</h3>
+            <div id="cartItems"></div>
+            <p>รวม: <span id="totalPrice">0</span> บาท</p>
+            <button class="w3-button w3-green" onclick="checkout()">ชำระเงิน</button>
+        </div>
+    </div>
+</div>
+<script>
+    // shopping_cart.js
+
+const cart = [];
+
+// ฟังก์ชันสำหรับเพิ่มหนังสือในตะกร้า
+function addToCart(bookName, price) {
+    const item = { name: bookName, price: price };
+    cart.push(item);
+    alert(bookName + " ถูกเพิ่มลงในตะกร้าแล้ว!");
+    console.log(cart); // แสดงรายการในคอนโซล
+}
+
+// ฟังก์ชันสำหรับแสดงตะกร้า
+function showCart() {
+    let cartItems = document.getElementById('cartItems');
+    cartItems.innerHTML = "";
+    let total = 0;
+
+    cart.forEach(item => {
+        cartItems.innerHTML += `<p>${item.name}: ${item.price} บาท</p>`;
+        total += item.price;
+    });
+
+    document.getElementById('totalPrice').innerText = total;
+    document.getElementById('cartModal').style.display = 'block';
+}
+
+// ฟังก์ชันสำหรับการชำระเงิน
+function checkout() {
+    alert("ขอบคุณที่ชำระเงิน!");
+    cart.length = 0; // เคลียร์ตะกร้า
+    document.getElementById('cartModal').style.display = 'none';
+}
+
+</script>
+</body>
+</html>

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ระบบจ่ายเงิน</title>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="sale.css">
+    <link rel="icon" href="astro.1.jpeg">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap"></script>
+</head>
+<body>
+    <!-- แถบเมนุด้านบน -->
+<div class="w3-top">
+    <div class="w3-bar w3-black w3-card" id="myNavbar">
+      <button class="w3-bar-item w3-button w3-wide" onclick="window.location.href='index.html'"><i class="fa-solid fa-arrow-left"></i><B> BACK</B></button>
+      <!-- ลิงค์แถบนำทางทางด้านขวา พวกปุ่มต่างๆ -->
+      <div class="w3-right w3-hide-small">
+      </div>
+    </div>
+  </div>
+  
+  <!-- แถบด้านข้างบนหน้าจอขนาดเล็กเมื่อคลิกไอคอนเมนู -->
+  
+    <!-- โมดัลสำหรับแสดงตะกร้า -->
+    <div id="cartModal" class="modal">
+        <div class="modal-content animate-top">
+            <div class="container">
+                <span onclick="closeCart()" class="close-btn">&times;</span>
+                <h3>ตะกร้าสินค้า</h3>
+                <div id="cartItems"></div>
+                <p>รวม: <span id="totalPrice">0</span> บาท</p>
+                <button class="btn-checkout" onclick="checkout()">ชำระเงิน</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="shopping_cart.js"></script>
+    <script>
+        function addToCart(item) {
+            let cart = JSON.parse(localStorage.getItem('cart')) || [];
+            cart.push(item);
+            localStorage.setItem('cart', JSON.stringify(cart));
+            displayCart(); // อัปเดตการแสดงผลหลังจากเพิ่มสินค้า
+        }
+
+        function displayCart() {
+            let cart = JSON.parse(localStorage.getItem('cart')) || [];
+            let cartItemsDiv = document.getElementById('cartItems');
+            let totalPrice = 0;
+
+            cartItemsDiv.innerHTML = '';
+            cart.forEach(item => {
+                cartItemsDiv.innerHTML += `<p>${item.name} - ${item.price} บาท</p>`;
+                totalPrice += item.price;
+            });
+
+            document.getElementById('totalPrice').textContent = totalPrice;
+        }
+
+        function clearCart() {
+            localStorage.removeItem('cart');
+            displayCart();
+        }
+
+        function checkout() {
+            alert('ชำระเงินสำเร็จ!');
+            clearCart();
+        }
+
+        function closeCart() {
+            document.getElementById('cartModal').style.display = 'none';
+        }
+
+        function openCart() {
+            displayCart();
+            document.getElementById('cartModal').style.display = 'block';
+        }
+
+    </script>
+</body>
+</html>

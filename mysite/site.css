@@ -1,0 +1,81 @@
+body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
+
+body, html {
+  height: 100%;
+  line-height: 1.8;
+}
+
+/* Full height image header */
+.bgimg-1 {
+  background-position: center;
+  background-size: cover; /* ขยายรูปให้เต็มพอดีกับพื้นที่ */
+  min-height: 100vh; /* ความสูงให้เต็มหน้าจอ */
+}
+
+.w3-bar .w3-button {
+  padding: 16px;
+}
+ /* ทำให้รูปแสดงเต็มจอ */
+.slideshow-container {
+  position: relative;
+  max-width: 100%;
+  margin: auto;
+}
+.slideshow-container img {
+  width: 100%;
+  height: auto; /* ปรับให้รูปภาพรักษาสัดส่วนและขยายเต็มหน้าจอ */
+}
+.w3-display-container {
+  position: relative;
+  max-width: 100%; /* ให้เนื้อหาภายในขยายเต็มพื้นที่ */
+  height: 100vh; /* ความสูงเต็มจอ */
+}
+
+.mySlides {
+  display: none;
+}
+
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+.w3-container {
+  padding: 128px 16px;
+}
+
+.w3-center {
+  text-align: center;
+}
+
+.w3-large {
+  font-size: 1.25em;
+}
+
+.chart-container {
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+}
+#map {
+  height: 200px;
+  width: 100%;
+}

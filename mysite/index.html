@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>W3.CSS Template</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+<link rel="stylesheet" href="site.css">
+<link rel="icon" href="astro.1.jpeg">
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap"></script>
+</head>
+<body>
+
+<!-- แถบเมนุด้านบน -->
+<div class="w3-top">
+  <div class="w3-bar w3-black w3-card" id="myNavbar">
+    <a href="#home" class="w3-bar-item w3-button w3-wide">celestial</a>
+    <!-- ลิงค์แถบนำทางทางด้านขวา พวกปุ่มต่างๆ -->
+    <div class="w3-right w3-hide-small">
+      <a href="#about" class="w3-bar-item w3-button"><i class="fa-solid fa-user-astronaut"></i> ABOUT</a>
+      <button class="w3-button w3-black" onclick="window.location.href='content.html'"><i class="fa-solid fa-earth-americas"></i> CONTENT</button>
+      <a href="#work" class="w3-bar-item w3-button"><i class="fa-solid fa-fire"></i> POPULAR</a>
+      <button class="w3-button w3-black" onclick="window.location.href='sale.html'"><i class="fa-regular fa-credit-card"></i> PAYMENT</button>
+      <a href="#contact" class="w3-bar-item w3-button"><i class="fa fa-envelope"></i> CONTACT</a>
+    </div>
+    <!-- ปุ่มตอนเมนูเล็กลง -->
+
+    <a href="javascript:void(0)" class="w3-bar-item w3-button w3-right w3-hide-large w3-hide-medium" onclick="w3_open()">
+      <i class="fa fa-bars"></i>
+    </a>
+  </div>
+</div>
+
+<!-- แถบด้านข้างบนหน้าจอขนาดเล็กเมื่อคลิกไอคอนเมนู -->
+<nav class="w3-sidebar w3-bar-block w3-black w3-card w3-animate-left w3-hide-medium w3-hide-large" style="display:none" id="mySidebar">
+  <a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-large w3-padding-16">Close ×</a>
+  <a href="#about" onclick="w3_close()" class="w3-bar-item w3-button"><i class="fa-solid fa-user-astronaut fa-6x"></i> ABOUT</a>
+  <button class="w3-button w3-black" onclick="window.location.href='content.html'"><i class="fa-solid fa-earth-americas"></i> CONTENT</button>
+  <a href="#work" onclick="w3_close()" class="w3-bar-item w3-button"><i class="fa-solid fa-fire"></i> POPULAR</a>
+  <a href="#pricing" onclick="w3_close()" class="w3-bar-item w3-button"><i class="fa-regular fa-credit-card"></i> PAYMENT</button>
+  <a href="#contact" onclick="w3_close()" class="w3-bar-item w3-button"><i class="fa fa-envelope"></i> CONTACT</a>
+</nav>
+
+<!-- รูปหลัก -->
+<header class="w3-display-container w3-grayscale-min" id="home">
+  <div class="slideshow-container">
+
+    <!-- รูปภาพ 1 -->
+    <div class="mySlides w3-display-container">
+      <img src="13.jpg" style="width:100%">
+      <div class="w3-display-left w3-text-white" style="padding:48px">
+        <span class="w3-jumbo w3-hide-small"><b>Unlock the Secrets of the Universe</b></span><br>
+        <span class="w3-large">เริ่มต้นการเดินทางจักรวาลที่ก้าวข้ามกาลเวลาและอวกาศ</span><br>
+        <span class="w3-large">สํารวจความมหัศจรรย์อันกว้างใหญ่ของกาแล็กซี ดวงดาว และดาวเคราะห์ที่รอการค้นพบ</span><br>
+        <span class="w3-large">ดําดิ่งสู่ความลึกลับของจักรวาลและเปิดเผยความรู้ที่ขยายขอบเขตความเข้าใจของมนุษย์</span>
+        <p><a href="#about" class="w3-button w3-white w3-padding-large w3-large w3-margin-top w3-opacity w3-hover-opacity-off">Learn more and start today</a></p>
+      </div>
+    </div>
+
+    <!-- รูปภาพ 2 -->
+    <div class="mySlides w3-display-container">
+      <img src="18.jpg" style="width:100%">
+      <div class="w3-display-left w3-text-white" style="padding:48px">
+        <span class="w3-jumbo w3-hide-small"><b>Explore the Boundless Universe</b></span><br>
+        <span class="w3-large">ผจญภัยในอาณาจักรอวกาศที่ไม่มีที่สิ้นสุด ที่ซึ่งดาวทุกดวงมีเรื่องราวและดาวเคราะห์แต่ละดวงมีการค้นพบใหม่ๆ</span><br>
+        <span class="w3-large">ร่วมเป็นสักขีพยานในความยิ่งใหญ่ของจักรวาลในขณะที่คุณเดินทางผ่านกาแล็กซีอันไกลโพ้น</span><br>
+        <span class="w3-large">ขยายความรู้และจินตนาการของคุณในขณะที่จักรวาลเปิดเผยความลับของมันทีละสิ่งมหัศจรรย์บนท้องฟ้า</span>
+      </div>
+    </div>
+
+    <!-- รูปภาพ 3 -->
+    <div class="mySlides w3-display-container">
+      <img src="15.jpg" style="width:100%">
+      <div class="w3-display-left w3-text-white" style="padding:48px">
+        <span class="w3-jumbo w3-hide-small"><b>Discover the Wonders Beyond Earth</b></span><br>
+        <span class="w3-large">เริ่มต้นการเดินทางที่ไม่ธรรมดาผ่านความลึกลับของอวกาศ</span><br>
+        <span class="w3-large">ที่ซึ่งสิ่งที่ไม่รู้จักรออยู่นอกโลกของเรา ตั้งแต่วงแหวนอันยิ่งใหญ่ของดาวเสาร์ไปจนถึงกาแล็กซีอันกว้างใหญ่อันไกลโพ้น</span><br>
+        <span class="w3-large">ให้ความอยากรู้อยากเห็นของคุณนําทางคุณไปสู่อาณาจักรใหม่แห่งการค้นพบและความเกรงขาม</span>
+      </div>
+    </div>
+
+    <!-- รูปภาพ 4 -->
+    <div class="mySlides w3-display-container">
+      <img src="19.jpg" style="width:100%">
+      <div class="w3-display-left w3-text-white" style="padding:48px">
+        <span class="w3-jumbo w3-hide-small"><b>Witness the Beauty of the Galaxy</b></span><br>
+        <span class="w3-large">ตื่นตาตื่นใจไปกับทิวทัศน์อันน่าทึ่งของดวงดาวที่ส่องแสงระยิบระยับและเนบิวลาหมุนวนที่ส่องสว่างบนผืนผ้าใบจักรวาล</span><br>
+        <span class="w3-large">ตั้งแต่แขนเรืองแสงของกาแล็กซีอันไกลโพ้นไปจนถึงความแวววาวของซูเปอร์โนวา ดื่มด่ําไปกับความยิ่งใหญ่ของจักรวาล</span><br>
+        <span class="w3-large">ปล่อยให้สิ่งมหัศจรรย์ของกาแล็กซีสร้างแรงบันดาลใจให้กับจินตนาการของคุณและขยายขอบเขตอันไกลโพ้นของคุณ</span>
+      </div>
+    </div>
+
+    <!-- รูปภาพ 5 -->
+    <div class="mySlides w3-display-container">
+      <img src="17.jpg" style="width:100%">
+      <div class="w3-display-left w3-text-white" style="padding:48px">
+        <span class="w3-jumbo w3-hide-small"><b>Start your journey</b></span><br>
+        <span class="w3-large">เริ่มต้นการผจญภัยที่ไม่ธรรมดาผ่านความลึกลับของอวกาศ ซึ่งการค้นพบแต่ละครั้งจะนําคุณเข้าใกล้การทําความเข้าใจจักรวาลมากขึ้น</span><br>
+        <span class="w3-large">จากดาวเคราะห์ในระบบสุริยะของเราไปจนถึงกาแล็กซีที่อยู่ห่างไกลที่สุด</span><br>
+        <span class="w3-large">ให้ความอยากรู้อยากเห็นของคุณนําทางคุณ จักรวาลรออยู ก้าวแรกสู่สิ่งที่ไม่รู้จักอย่างไม่มีที่สิ้นสุด</span>
+      </div>
+      </div>
+    </div>
+
+    <!-- ปุ่มถัดไป/ก่อนหน้า -->
+    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+  </div>
+
+
+</header>
+
+<!-- เกี่ยวกับเรา -->
+<div class="w3-container" style="padding:100px 16px" id="about">
+  <h3 class="w3-left" style="margin-top: -20px; font-weight: 800;">Celestial ให้อะไรแก่คุณ?</h3> <!-- เพิ่มความหนา -->
+  <p></p><br>
+  <p>  </p><br>
+  <p>  </p>
+  <div class="w3-row-padding w3-center" style="margin-top:64px">
+    <div class="w3-third"> <!-- เปลี่ยนจาก w3-quarter เป็น w3-third -->
+      <i class="fa-solid fa-user-astronaut fa-6x"></i>
+      <p class="w3-large">เกี่ยวกับ Celestial </p>
+      <p>Celestial คือ เว็บไซต์ที่เกี่ยวกับดาราศาสตร์ ให้ความรู้พื้นฐาน และรูปภาพจากอวกาศสวยๆให้ได้รับชม เว็บไซต์นี้เป็นเว็บไซต์ทดลองเพื่อให้นึกศึกษาได้ลองฝึกเขียนเว็บไซต์</p>
+    </div>
+    <div class="w3-third">
+      <i class="fa-regular fa-image fa-6x"></i>
+      <p class="w3-large">ทิวทัศน์</p>
+      <p>เว็บไซต์ของเรารวบรวมภาพถ่ายอวกาศที่สวยงามและน่าทึ่งจากหลากหลายภารกิจทางดาราศาสตร์
+        ท่องไปในความกว้างใหญ่ของจักรวาลและพบกับภาพถ่ายของดาวเคราะห์, ดวงดาว, และกาแล็กซีต่างๆ
+        เพลิดเพลินไปกับความงดงามของอวกาศ ทั้งภาพที่ถ่ายจากกล้องโทรทรรศน์และจากยานอวกาศ
+        สัมผัสความอัศจรรย์ของจักรวาลผ่านภาพถ่ายที่มีความละเอียดสูงและเต็มไปด้วยสีสันที่แท้จริง</p>
+    </div>
+    <div class="w3-third"> <!-- เปลี่ยนจาก w3-quarter เป็น w3-third -->
+      <i class="fa-solid fa-book fa-6x"></i>
+      <p class="w3-large">ความรู้เกี่ยวกับดาราศาสตร์</p>
+      <p>สำรวจความรู้เกี่ยวกับดาราศาสตร์ ตั้งแต่พื้นฐานจนถึงความรู้เชิงลึกของการสำรวจอวกาศ
+        เรียนรู้เกี่ยวกับระบบสุริยะ ดาวเคราะห์ ดวงดาว และปรากฏการณ์ต่างๆ ในจักรวาล
+        เรานำเสนอข้อมูลวิทยาศาสตร์อวกาศในรูปแบบที่เข้าใจง่าย เพื่อให้ทุกคนสามารถเรียนรู้ได้
+        ติดตามข่าวสารล่าสุดเกี่ยวกับการค้นพบใหม่ ๆ และความก้าวหน้าทางดาราศาสตร์ทั่วโลก</p>
+    </div>
+  </div>
+</div>
+
+
+<!-- กราฟความยอดนิยม -->
+<div class="w3-container" id="work">
+  <h3 class="w3-center">Website Visitor Popularity</h3>
+  <p class="w3-center w3-large">จำนวนผู้เข้าชมในแต่ละวันt</p>
+
+  <div class="chart-container">
+    <canvas id="popularityChart"></canvas>
+  </div>
+</div>
+
+<script>
+  // ข้อมูลจำนวนผู้เข้าชมในแต่ละวัน
+  const visitorData = {
+    labels: ['วันจันทร์', 'วันอังคาร', 'วันพุธ', 'วันพฤหัสบดี', 'วันศูกรื', 'วันเสาร์', 'วันอาทิตย์'],
+    datasets: [{
+      label: 'จำนวนผู้เข้าชม',
+      data: [120, 150, 180, 200, 170, 220, 250], // ข้อมูลจำนวนผู้เข้าชมในแต่ละวัน
+      backgroundColor: 'rgba(0, 0, 0, 0.8)',
+      borderColor: 'rgba(0, 0, 0, 1)',
+      borderWidth: 1
+    }]
+  };
+
+  // การตั้งค่าของกราฟ
+  const config = {
+    type: 'bar', // เปลี่ยนประเภทกราฟได้ เช่น 'line', 'pie'
+    data: visitorData,
+    options: {
+      scales: {
+        y: {
+          beginAtZero: true
+        }
+      }
+    }
+  };
+
+  // สร้างกราฟใน canvas ด้วย Chart.js
+  const popularityChart = new Chart(
+    document.getElementById('popularityChart'),
+    config
+  );
+</script>
+
+<!-- Book Section -->
+<div class="w3-container w3-center w3-grey" style="padding:60px 16px" id="books">
+  <h3>หนังสือดาราศาสตร์ที่น่าสนใจ</h3>
+  <p class="w3-large">เลือกหนังสือที่สนใจ</p>
+  <div class="w3-row-padding" style="margin-top:64px">
+    
+    <!-- Book 1 -->
+    <div class="w3-third w3-section">
+      <ul class="w3-ul w3-white w3-hover-">
+        <li class="w3-black w3-xlarge w3-padding-32">โลกดาราศาสตร์และอวกาศ ม.4</li>
+        <li class="w3-padding-16"><img src="book1.jpg" alt="Book 1" style="width:60%; height:300px;"></li>
+        <li class="w3-padding-16"><b>ราคา :</b> $300</li>
+        <li class="w3-light-grey w3-padding-24">
+          <button class="w3-button w3-black w3-padding-large" onclick="addToCart('โลกดาราศาสตร์และอวกาศ ม.4', 300)">ซื้อเดี๋ยวนี้เลย</button>
+        </li>
+      </ul>
+    </div>
+    
+    <!-- Book 2 -->
+    <div class="w3-third w3-section">
+      <ul class="w3-ul w3-white w3-hover-shadow">
+        <li class="w3-black w3-xlarge w3-padding-32">โลกดาราศาสตร์และอวกาศ เล่ม3</li>
+        <li class="w3-padding-16"><img src="book2.jpg" alt="Book 2" style="width:60%; height:300px;"></li>
+        <li class="w3-padding-16"><b>ราคา :</b> $400</li>
+        <li class="w3-light-grey w3-padding-24">
+          <button class="w3-button w3-black w3-padding-large" onclick="addToCart('โลกดาราศาสตร์และอวกาศ เล่ม 3', 400)">ซื้อเดี๋ยวนี้เลย</button>
+        </li>
+      </ul>
+    </div>
+
+    <!-- Book 3 -->
+    <div class="w3-third w3-section">
+      <ul class="w3-ul w3-white w3-hover-shadow">
+        <li class="w3-black w3-xlarge w3-padding-32">มหัสจรรย์มนุษย์กับดวงดาว</li>
+        <li class="w3-padding-16"><img src="book3.jpg" alt="Book 3" style="width:60%; height:300px;"></li>
+        <li class="w3-padding-16"><b>ราคา :</b> 350 บาท</li>
+        <li class="w3-light-grey w3-padding-24">
+          <button class="w3-button w3-black w3-padding-large" onclick="addToCart('มหัสจรรย์มนุษย์กับดวงดาว', 350)">ซื้อเดี๋ยวนี้เลย</button>
+        </li>
+      </ul>
+    </div>
+    
+  </div>  
+</div>
+
+<!-- Contact Section -->
+<div class="w3-container w3-light-grey" style="padding:60px 16px" id="contact">
+  <h3 class="w3-center"><b>CONTACT</b></h3>
+  <p class="w3-center w3-large">สามารถติดต่อทางเว็บไซตืได้ที่นี่</p>
+  <div style="margin-top:48px">
+    <p><i class="fa fa-phone fa-fw w3-xxlarge w3-margin-right"></i> Phone: 096223-xxxx</p>
+    <p><i class="fa fa-envelope fa-fw w3-xxlarge w3-margin-right"> </i> Email: 6520310138@psu.ac.th</p>
+    <p><i class="fa fa-map-marker fa-fw w3-xxlarge w3-margin-right"></i> อำเภอเมือง ตำบลรูสะมิแล จังหวัดปัตตานี 94160 </p>
+    <br>
+    <div id="map"></div>
+    <p id="location-info"></p>
+  </div>
+</div>
+
+<!-- Footer -->
+<footer class="w3-center w3-black w3-padding-64">
+  <a href="#home" class="w3-button w3-light-grey"><i class="fa fa-arrow-up w3-margin-right"></i>To the top</a>
+  <div class="w3-xlarge w3-section">
+  </div>
+  <p>Thank you</p>
+</footer>
+ 
+<script>
+//แผนที่
+let map;
+let infoWindow;
+
+function initMap() {
+  map = new google.maps.Map(document.getElementById("map"), {
+    center: { lat: -34.397, lng: 150.644 },
+    zoom: 6,
+  });
+
+  infoWindow = new google.maps.InfoWindow();
+
+  if (navigator.geolocation) {
+    navigator.geolocation.getCurrentPosition(
+      (position) => {
+        const pos = {
+          lat: position.coords.latitude,
+          lng: position.coords.longitude,
+        };
+
+        // สร้าง Marker ที่ตำแหน่งปัจจุบันของผู้ใช้
+        const marker = new google.maps.Marker({
+          position: pos,
+          map: map,
+          title: "You are here!",
+        });
+
+        // แสดงตำแหน่งที่ตั้งปัจจุบันบนแผนที่
+        infoWindow.setPosition(pos);
+        infoWindow.setContent("Your current location.");
+        infoWindow.open(map);
+        map.setCenter(pos);
+      },
+      () => {
+        handleLocationError(true, infoWindow, map.getCenter());
+      }
+    );
+  } else {
+    handleLocationError(false, infoWindow, map.getCenter());
+  }
+
+  map.addListener("click", (event) => {
+    let lat = event.latLng.lat();
+    let lng = event.latLng.lng();
+    reverseGeocode(lat, lng);
+  });
+}
+
+function handleLocationError(browserHasGeolocation, infoWindow, pos) {
+  infoWindow.setPosition(pos);
+  infoWindow.setContent(
+    browserHasGeolocation
+      ? "Error: The Geolocation service failed."
+      : "Error: Your browser doesn't support geolocation."
+  );
+  infoWindow.open(map);
+}
+
+function reverseGeocode(lat, lng) {
+  const geocoder = new google.maps.Geocoder();
+  const latlng = { lat: parseFloat(lat), lng: parseFloat(lng) };
+
+  geocoder.geocode({ location: latlng }, (results, status) => {
+    if (status === "OK") {
+      if (results[0]) {
+        document.getElementById("location-info").innerText =
+          "Address: " + results[0].formatted_address;
+      } else {
+        document.getElementById("location-info").innerText =
+          "No results found";
+      }
+    } else {
+      document.getElementById("location-info").innerText =
+        "Geocoder failed due to: " + status;
+    }
+  });
+}
+
+// Modal Image Gallery
+function onClick(element) {
+  document.getElementById("img01").src = element.src;
+  document.getElementById("modal01").style.display = "block";
+  var captionText = document.getElementById("caption");
+  captionText.innerHTML = element.alt;
+}
+
+
+// Toggle between showing and hiding the sidebar when clicking the menu icon
+var mySidebar = document.getElementById("mySidebar");
+
+function w3_open() {
+  if (mySidebar.style.display === 'block') {
+    mySidebar.style.display = 'none';
+  } else {
+    mySidebar.style.display = 'block';
+  }
+}
+
+// Close the sidebar with the close button
+function w3_close() {
+    mySidebar.style.display = "none";
+}
+
+let slideIndex = 1;
+showSlides(slideIndex);
+
+// ปรับเปลี่ยนสไลด์
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+// แสดงผลสไลด์ที่เลือก
+function showSlides(n) {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  
+  if (n > slides.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = slides.length}
+  
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";  
+  }
+  
+  slides[slideIndex-1].style.display = "block";  
+}
+</script>
+
+<!-- เพิ่มตะกร้า -->
+ <script>
+
+// Function to add items to the cart
+function addToCart(productName, productPrice) {
+  let cart = JSON.parse(localStorage.getItem('cart')) || []; // อ่านข้อมูลตะกร้าจาก LocalStorage ถ้าไม่มีให้เริ่มต้นเป็น array ว่าง
+  cart.push({ name: productName, price: productPrice }); // เพิ่มสินค้าลงในตะกร้า
+  localStorage.setItem('cart', JSON.stringify(cart)); // บันทึกตะกร้าลงใน LocalStorage
+  alert(productName + ' ถูกเพิ่มลงในตะกร้า');}
+
+  
+
+ </script>
+
+</body>
+</html>

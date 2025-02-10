@@ -1,0 +1,87 @@
+/* ธีมขาวดำ */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f0f0f0;
+    color: #333;
+}
+
+/* โมดัล */
+.modal {
+    display: block;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content {
+    background-color: #fff;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 60%;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.animate-top {
+    animation: animatetop 0.4s;
+}
+
+@keyframes animatetop {
+    from {top: -300px; opacity: 0}
+    to {top: 0; opacity: 1}
+}
+
+/* ปุ่มปิดโมดัล */
+.close-btn {
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    color: #333;
+    cursor: pointer;
+}
+
+.close-btn:hover {
+    color: #000;
+}
+
+/* ปุ่มชำระเงิน */
+.btn-checkout {
+    background-color: #000;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    margin-top: 20px;
+    border-radius: 5px;
+}
+
+.btn-checkout:hover {
+    background-color: #333;
+}
+
+/* ตกแต่งตะกร้าสินค้า */
+#cartItems p {
+    font-size: 16px;
+    border-bottom: 1px solid #ccc;
+    padding: 10px 0;
+}
+
+#totalPrice {
+    font-weight: bold;
+    font-size: 18px;
+}
+body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
+
+body, html {
+  height: 100%;
+  line-height: 1.8;
+}
+.w3-bar .w3-button {
+    padding: 16px;
+  }
