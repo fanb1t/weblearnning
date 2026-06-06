@@ -1,8 +1,8 @@
+<h1 align="center">Celestial</h1>
 <p align="center">
   <img src="mysite/assets/logo.png" alt="โลโก้ Celestial" width="96">
 </p>
 
-<h1 align="center">Celestial</h1>
 
 <p align="center">
   เว็บ Landing Page เกี่ยวกับระบบสุริยะ สร้างด้วย HTML, CSS และ JavaScript
