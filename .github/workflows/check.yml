@@ -1,0 +1,148 @@
+name: Code and Security Checks
+
+on:
+  pull_request:
+    branches:
+      - main
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pull-requests: read
+
+jobs:
+  checks:
+    name: Static site checks
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Check required files
+        shell: bash
+        run: |
+          test -f mysite/index.html
+          test -f mysite/css/global.css
+          test -f mysite/javascript/main.js
+          test -f mysite/vercel.json
+
+      - name: Scan for secrets
+        uses: gitleaks/gitleaks-action@v2
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Block env and temporary files
+        shell: bash
+        run: |
+          blocked_files="$(find . -type f \( \
+            -name '.env' -o \
+            -name '.env.*' -o \
+            -name '*.bak' -o \
+            -name '*.backup' -o \
+            -name '*.tmp' -o \
+            -name '*.log' -o \
+            -name '.DS_Store' \
+          \) ! -name '.env.example' -print)"
+
+          if [ -n "$blocked_files" ]; then
+            echo "Blocked files found:"
+            echo "$blocked_files"
+            exit 1
+          fi
+
+      - name: Block insecure HTTP links
+        shell: bash
+        run: |
+          if grep -RIn "http://" mysite --include="*.html" --include="*.css" --include="*.js"; then
+            echo "Use HTTPS links only."
+            exit 1
+          fi
+
+      - name: Block unsafe innerHTML usage
+        shell: bash
+        run: |
+          if grep -RIn "\.innerHTML\b" mysite --include="*.html" --include="*.js"; then
+            echo "Avoid innerHTML. Use textContent or safe DOM APIs."
+            exit 1
+          fi
+
+      - name: Check target blank security
+        shell: bash
+        run: |
+          python - <<'PY'
+          from html.parser import HTMLParser
+          from pathlib import Path
+          import sys
+
+          class LinkChecker(HTMLParser):
+              def __init__(self, path):
+                  super().__init__()
+                  self.path = path
+                  self.errors = []
+
+              def handle_starttag(self, tag, attrs):
+                  if tag.lower() != "a":
+                      return
+
+                  values = dict(attrs)
+                  if values.get("target") != "_blank":
+                      return
+
+                  rel = set(values.get("rel", "").split())
+                  missing = {"noopener", "noreferrer"} - rel
+                  if missing:
+                      self.errors.append(
+                          f"{self.path}: target=\"_blank\" is missing rel=\"noopener noreferrer\""
+                      )
+
+          errors = []
+          for path in Path("mysite").rglob("*.html"):
+              parser = LinkChecker(path)
+              parser.feed(path.read_text(encoding="utf-8", errors="ignore"))
+              errors.extend(parser.errors)
+
+          if errors:
+              print("\n".join(errors))
+              sys.exit(1)
+          PY
+
+      - name: Check Vercel security headers
+        shell: bash
+        run: |
+          python - <<'PY'
+          import json
+          import sys
+          from pathlib import Path
+
+          config_path = Path("mysite/vercel.json")
+          config = json.loads(config_path.read_text(encoding="utf-8"))
+          headers = config.get("headers", [])
+          keys = {
+              header.get("key")
+              for rule in headers
+              for header in rule.get("headers", [])
+          }
+
+          required = {
+              "X-Content-Type-Options",
+              "X-Frame-Options",
+              "Referrer-Policy",
+              "Permissions-Policy",
+          }
+          missing = sorted(required - keys)
+
+          if missing:
+              print("Missing security headers:", ", ".join(missing))
+              sys.exit(1)
+          PY
+
+      - name: JavaScript syntax check
+        shell: bash
+        run: |
+          node --check mysite/javascript/main.js

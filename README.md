@@ -1,31 +1,50 @@
-# 🌌 ดวงดาวและดาราศาสตร์ 🪐✨
+# Celestial
 
-เว็บไซต์นี้เป็นโปรเจกต์ฝึกฝนการพัฒนาเว็บด้วย **HTML**, **CSS**, **JavaScript** และการตั้งค่าเซิร์ฟเวอร์ด้วย **.htaccess**
+Celestial is a responsive landing page about the solar system. The project presents a short overview of the solar system, introduces the eight planets, and shares simple facts for beginners who want to learn about space.
 
-> 💡 จุดประสงค์: สร้างเว็บไซต์เพื่อให้ความรู้เกี่ยวกับ “ดาราศาสตร์” และจำหน่ายหนังสือเกี่ยวกับจักรวาล 🛸📚
+## Project Overview
 
----
+This website is built as a basic web practice project using HTML, CSS, and JavaScript. The design uses a dark space-inspired theme with yellow accent colors, planet imagery, smooth navigation, and simple interactive behavior.
 
-## 🔧 เทคโนโลยีที่ใช้
+## Main Sections
 
-| 🔧 | รายละเอียด |
-|----|-------------|
-| 🧱 HTML | โครงสร้างหน้าเว็บไซต์ |
-| 🎨 CSS (Bootstrap) | ตกแต่งให้สวยงามและ responsive |
-| ⚙️ JavaScript | เพิ่มความโต้ตอบ เช่น ปุ่ม, เมนู, animation |
-| 🔐 .htaccess | ปรับแต่งการเข้าถึงและความปลอดภัยของเซิร์ฟเวอร์ (เช่น ป้องกันแสดงรายการไฟล์) |
+- Hero section with a space-themed introduction
+- Overview section explaining what the solar system is
+- Planet section describing each planet one by one
+- Facts section with key solar system facts
+- Footer with project branding
 
----
+## Features
 
-## 🌠 คุณสมบัติของเว็บไซต์
+- Responsive layout for desktop and mobile screens
+- Sticky navigation bar
+- Active navigation state while scrolling
+- Planet dropdown menu for jumping to each planet
+- Smooth reveal animation on scroll
+- Scroll-to-top button
+- Mobile navigation menu
 
-- 🔭 บทความเกี่ยวกับดวงดาว, ดาวเคราะห์, กาแล็กซี และจักรวาล
-- 📷 ภาพประกอบสวยงาม พร้อมข้อมูลเชิงวิชาการ
-- 📚 แนะนำและจำหน่ายหนังสือดาราศาสตร์สำหรับผู้เริ่มต้น
-- 💬 เมนูติดต่อสอบถาม / แบบฟอร์มสนใจหนังสือ
-- 🌐 รองรับการแสดงผลทั้งบนมือถือและเดสก์ท็อป
+## Technologies Used
 
----
+- HTML for page structure
+- CSS for layout, colors, typography, and responsive design
+- JavaScript for navigation behavior, animations, and scroll interactions
 
-## 📁 โครงสร้างโฟลเดอร์ (บางส่วน)
+## Folder Structure
 
+```text
+mysite/
+  assets/
+    logo.png
+    solarsystem.jpg
+    sun.jpg
+  css/
+    global.css
+  javascript/
+    main.js
+  index.html
+```
+
+## Purpose
+
+The goal of this project is to practice building a complete landing page from scratch while learning how to organize page sections, style a themed interface, and add small JavaScript interactions that improve the user experience.
