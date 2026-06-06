@@ -1,40 +1,53 @@
-# Celestial
+<p align="center">
+  <img src="mysite/assets/logo.png" alt="โลโก้ Celestial" width="96">
+</p>
 
-Celestial is a responsive landing page about the solar system. The project presents a short overview of the solar system, introduces the eight planets, and shares simple facts for beginners who want to learn about space.
+<h1 align="center">Celestial</h1>
 
-## Project Overview
+<p align="center">
+  เว็บ Landing Page เกี่ยวกับระบบสุริยะ สร้างด้วย HTML, CSS และ JavaScript
+</p>
 
-This website is built as a basic web practice project using HTML, CSS, and JavaScript. The design uses a dark space-inspired theme with yellow accent colors, planet imagery, smooth navigation, and simple interactive behavior.
+Celestial เป็นเว็บ Landing Page สำหรับนำเสนอข้อมูลเกี่ยวกับระบบสุริยะ โดยมีเนื้อหาอธิบายภาพรวมของระบบสุริยะ แนะนำดาวเคราะห์ทั้ง 8 ดวง และรวบรวมข้อเท็จจริงที่เข้าใจง่ายสำหรับผู้เริ่มต้นเรียนรู้เรื่องอวกาศ
 
-## Main Sections
+## ตัวอย่างหน้าเว็บ
 
-- Hero section with a space-themed introduction
-- Overview section explaining what the solar system is
-- Planet section describing each planet one by one
-- Facts section with key solar system facts
-- Footer with project branding
+![ตัวอย่างหน้าเว็บ Celestial](mysite/assets/image.png)
 
-## Features
+## ภาพรวมโปรเจกต์
 
-- Responsive layout for desktop and mobile screens
-- Sticky navigation bar
-- Active navigation state while scrolling
-- Planet dropdown menu for jumping to each planet
-- Smooth reveal animation on scroll
-- Scroll-to-top button
-- Mobile navigation menu
+โปรเจกต์นี้เป็นงานฝึกพัฒนาเว็บพื้นฐานด้วย HTML, CSS และ JavaScript โดยออกแบบในธีมอวกาศ ใช้พื้นหลังสีเข้ม สีเหลืองเป็นสีหลักสำหรับจุดเน้น รูปภาพดาวเคราะห์ และการโต้ตอบเล็ก ๆ เพื่อให้หน้าเว็บดูน่าสนใจและใช้งานง่ายขึ้น
 
-## Technologies Used
+## ส่วนหลักของเว็บไซต์
 
-- HTML for page structure
-- CSS for layout, colors, typography, and responsive design
-- JavaScript for navigation behavior, animations, and scroll interactions
+- ส่วน Hero สำหรับแนะนำเว็บไซต์
+- ส่วนอธิบายว่าระบบสุริยะคืออะไร
+- ส่วนแนะนำดาวเคราะห์แต่ละดวง
+- ส่วนข้อเท็จจริงเกี่ยวกับระบบสุริยะ
+- ส่วน Footer สำหรับข้อมูลท้ายหน้า
 
-## Folder Structure
+## ฟีเจอร์
+
+- รองรับการแสดงผลทั้งหน้าจอคอมพิวเตอร์ แท็บเล็ต และมือถือ
+- แถบนำทางแบบ Sticky Navigation
+- เมนูนำทางเปลี่ยนสถานะตาม section ที่กำลังอ่าน
+- เมนูย่อยสำหรับเลือกไปยังดาวเคราะห์แต่ละดวง
+- Animation แสดงเนื้อหาเมื่อเลื่อนถึง
+- ปุ่มกลับขึ้นด้านบน
+- เมนูสำหรับหน้าจอมือถือ
+
+## เทคโนโลยีที่ใช้
+
+- HTML สำหรับโครงสร้างหน้าเว็บ
+- CSS สำหรับจัด layout สี ตัวอักษร และ responsive design
+- JavaScript สำหรับการทำงานของเมนู animation และการเลื่อนหน้า
+
+## โครงสร้างโฟลเดอร์
 
 ```text
 mysite/
   assets/
+    image.png
     logo.png
     solarsystem.jpg
     sun.jpg
@@ -45,6 +58,6 @@ mysite/
   index.html
 ```
 
-## Purpose
+## จุดประสงค์ของโปรเจกต์
 
-The goal of this project is to practice building a complete landing page from scratch while learning how to organize page sections, style a themed interface, and add small JavaScript interactions that improve the user experience.
+โปรเจกต์นี้สร้างขึ้นเพื่อฝึกทำ Landing Page ตั้งแต่การวางโครงสร้าง HTML การจัดสไตล์ด้วย CSS การออกแบบ responsive layout และการเพิ่ม JavaScript เพื่อให้หน้าเว็บมีการโต้ตอบที่ดีขึ้น
