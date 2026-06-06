@@ -1,402 +1,151 @@
 <!DOCTYPE html>
-<html>
+<html lang="th">
 <head>
-<title>W3.CSS Template</title>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-<link rel="stylesheet" href="site.css">
-<link rel="icon" href="astro.1.jpeg">
-<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-<script async defer src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Celestrial - เรียนรู้เกี่ยวกับระบบสุริยะ</title>
+  <link rel="icon" type="image/png" href="assets/logo.png">
+  <link rel="stylesheet" href="css/global.css">
 </head>
 <body>
 
-<!-- แถบเมนุด้านบน -->
-<div class="w3-top">
-  <div class="w3-bar w3-black w3-card" id="myNavbar">
-    <a href="#home" class="w3-bar-item w3-button w3-wide">celestial</a>
-    <!-- ลิงค์แถบนำทางทางด้านขวา พวกปุ่มต่างๆ -->
-    <div class="w3-right w3-hide-small">
-      <a href="#about" class="w3-bar-item w3-button"><i class="fa-solid fa-user-astronaut"></i> ABOUT</a>
-      <button class="w3-button w3-black" onclick="window.location.href='content.html'"><i class="fa-solid fa-earth-americas"></i> CONTENT</button>
-      <a href="#work" class="w3-bar-item w3-button"><i class="fa-solid fa-fire"></i> POPULAR</a>
-      <button class="w3-button w3-black" onclick="window.location.href='sale.html'"><i class="fa-regular fa-credit-card"></i> PAYMENT</button>
-      <a href="#contact" class="w3-bar-item w3-button"><i class="fa fa-envelope"></i> CONTACT</a>
+  <header>
+    <div class="container header-layout">
+      <a href="#home" class="brand">
+        <img src="assets/logo.png" alt="Celestrial logo">
+        <span>Celestial</span>
+      </a>
+      <button class="nav-toggle" type="button" aria-label="Toggle navigation" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <nav>
+        <ul>
+          <li> <a href="#home">Home</a> </li>
+          <li> <a href="#overview">Overview</a> </li>
+          <li> <a href="#planets">Planets</a> </li>
+          <li> <a href="#facts">Facts</a> </li>
+        </ul>
+      </nav>
+      <a href="#planets" class="header-cta">Explore Universe <span>→</span></a>
     </div>
-    <!-- ปุ่มตอนเมนูเล็กลง -->
-
-    <a href="javascript:void(0)" class="w3-bar-item w3-button w3-right w3-hide-large w3-hide-medium" onclick="w3_open()">
-      <i class="fa fa-bars"></i>
-    </a>
-  </div>
-</div>
-
-<!-- แถบด้านข้างบนหน้าจอขนาดเล็กเมื่อคลิกไอคอนเมนู -->
-<nav class="w3-sidebar w3-bar-block w3-black w3-card w3-animate-left w3-hide-medium w3-hide-large" style="display:none" id="mySidebar">
-  <a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-large w3-padding-16">Close ×</a>
-  <a href="#about" onclick="w3_close()" class="w3-bar-item w3-button"><i class="fa-solid fa-user-astronaut fa-6x"></i> ABOUT</a>
-  <button class="w3-button w3-black" onclick="window.location.href='content.html'"><i class="fa-solid fa-earth-americas"></i> CONTENT</button>
-  <a href="#work" onclick="w3_close()" class="w3-bar-item w3-button"><i class="fa-solid fa-fire"></i> POPULAR</a>
-  <a href="#pricing" onclick="w3_close()" class="w3-bar-item w3-button"><i class="fa-regular fa-credit-card"></i> PAYMENT</button>
-  <a href="#contact" onclick="w3_close()" class="w3-bar-item w3-button"><i class="fa fa-envelope"></i> CONTACT</a>
-</nav>
-
-<!-- รูปหลัก -->
-<header class="w3-display-container w3-grayscale-min" id="home">
-  <div class="slideshow-container">
-
-    <!-- รูปภาพ 1 -->
-    <div class="mySlides w3-display-container">
-      <img src="13.jpg" style="width:100%">
-      <div class="w3-display-left w3-text-white" style="padding:48px">
-        <span class="w3-jumbo w3-hide-small"><b>Unlock the Secrets of the Universe</b></span><br>
-        <span class="w3-large">เริ่มต้นการเดินทางจักรวาลที่ก้าวข้ามกาลเวลาและอวกาศ</span><br>
-        <span class="w3-large">สํารวจความมหัศจรรย์อันกว้างใหญ่ของกาแล็กซี ดวงดาว และดาวเคราะห์ที่รอการค้นพบ</span><br>
-        <span class="w3-large">ดําดิ่งสู่ความลึกลับของจักรวาลและเปิดเผยความรู้ที่ขยายขอบเขตความเข้าใจของมนุษย์</span>
-        <p><a href="#about" class="w3-button w3-white w3-padding-large w3-large w3-margin-top w3-opacity w3-hover-opacity-off">Learn more and start today</a></p>
-      </div>
-    </div>
-
-    <!-- รูปภาพ 2 -->
-    <div class="mySlides w3-display-container">
-      <img src="18.jpg" style="width:100%">
-      <div class="w3-display-left w3-text-white" style="padding:48px">
-        <span class="w3-jumbo w3-hide-small"><b>Explore the Boundless Universe</b></span><br>
-        <span class="w3-large">ผจญภัยในอาณาจักรอวกาศที่ไม่มีที่สิ้นสุด ที่ซึ่งดาวทุกดวงมีเรื่องราวและดาวเคราะห์แต่ละดวงมีการค้นพบใหม่ๆ</span><br>
-        <span class="w3-large">ร่วมเป็นสักขีพยานในความยิ่งใหญ่ของจักรวาลในขณะที่คุณเดินทางผ่านกาแล็กซีอันไกลโพ้น</span><br>
-        <span class="w3-large">ขยายความรู้และจินตนาการของคุณในขณะที่จักรวาลเปิดเผยความลับของมันทีละสิ่งมหัศจรรย์บนท้องฟ้า</span>
-      </div>
-    </div>
-
-    <!-- รูปภาพ 3 -->
-    <div class="mySlides w3-display-container">
-      <img src="15.jpg" style="width:100%">
-      <div class="w3-display-left w3-text-white" style="padding:48px">
-        <span class="w3-jumbo w3-hide-small"><b>Discover the Wonders Beyond Earth</b></span><br>
-        <span class="w3-large">เริ่มต้นการเดินทางที่ไม่ธรรมดาผ่านความลึกลับของอวกาศ</span><br>
-        <span class="w3-large">ที่ซึ่งสิ่งที่ไม่รู้จักรออยู่นอกโลกของเรา ตั้งแต่วงแหวนอันยิ่งใหญ่ของดาวเสาร์ไปจนถึงกาแล็กซีอันกว้างใหญ่อันไกลโพ้น</span><br>
-        <span class="w3-large">ให้ความอยากรู้อยากเห็นของคุณนําทางคุณไปสู่อาณาจักรใหม่แห่งการค้นพบและความเกรงขาม</span>
-      </div>
-    </div>
-
-    <!-- รูปภาพ 4 -->
-    <div class="mySlides w3-display-container">
-      <img src="19.jpg" style="width:100%">
-      <div class="w3-display-left w3-text-white" style="padding:48px">
-        <span class="w3-jumbo w3-hide-small"><b>Witness the Beauty of the Galaxy</b></span><br>
-        <span class="w3-large">ตื่นตาตื่นใจไปกับทิวทัศน์อันน่าทึ่งของดวงดาวที่ส่องแสงระยิบระยับและเนบิวลาหมุนวนที่ส่องสว่างบนผืนผ้าใบจักรวาล</span><br>
-        <span class="w3-large">ตั้งแต่แขนเรืองแสงของกาแล็กซีอันไกลโพ้นไปจนถึงความแวววาวของซูเปอร์โนวา ดื่มด่ําไปกับความยิ่งใหญ่ของจักรวาล</span><br>
-        <span class="w3-large">ปล่อยให้สิ่งมหัศจรรย์ของกาแล็กซีสร้างแรงบันดาลใจให้กับจินตนาการของคุณและขยายขอบเขตอันไกลโพ้นของคุณ</span>
-      </div>
-    </div>
-
-    <!-- รูปภาพ 5 -->
-    <div class="mySlides w3-display-container">
-      <img src="17.jpg" style="width:100%">
-      <div class="w3-display-left w3-text-white" style="padding:48px">
-        <span class="w3-jumbo w3-hide-small"><b>Start your journey</b></span><br>
-        <span class="w3-large">เริ่มต้นการผจญภัยที่ไม่ธรรมดาผ่านความลึกลับของอวกาศ ซึ่งการค้นพบแต่ละครั้งจะนําคุณเข้าใกล้การทําความเข้าใจจักรวาลมากขึ้น</span><br>
-        <span class="w3-large">จากดาวเคราะห์ในระบบสุริยะของเราไปจนถึงกาแล็กซีที่อยู่ห่างไกลที่สุด</span><br>
-        <span class="w3-large">ให้ความอยากรู้อยากเห็นของคุณนําทางคุณ จักรวาลรออยู ก้าวแรกสู่สิ่งที่ไม่รู้จักอย่างไม่มีที่สิ้นสุด</span>
-      </div>
-      </div>
-    </div>
-
-    <!-- ปุ่มถัดไป/ก่อนหน้า -->
-    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-    <a class="next" onclick="plusSlides(1)">&#10095;</a>
-  </div>
-
-
-</header>
-
-<!-- เกี่ยวกับเรา -->
-<div class="w3-container" style="padding:100px 16px" id="about">
-  <h3 class="w3-left" style="margin-top: -20px; font-weight: 800;">Celestial ให้อะไรแก่คุณ?</h3> <!-- เพิ่มความหนา -->
-  <p></p><br>
-  <p>  </p><br>
-  <p>  </p>
-  <div class="w3-row-padding w3-center" style="margin-top:64px">
-    <div class="w3-third"> <!-- เปลี่ยนจาก w3-quarter เป็น w3-third -->
-      <i class="fa-solid fa-user-astronaut fa-6x"></i>
-      <p class="w3-large">เกี่ยวกับ Celestial </p>
-      <p>Celestial คือ เว็บไซต์ที่เกี่ยวกับดาราศาสตร์ ให้ความรู้พื้นฐาน และรูปภาพจากอวกาศสวยๆให้ได้รับชม เว็บไซต์นี้เป็นเว็บไซต์ทดลองเพื่อให้นึกศึกษาได้ลองฝึกเขียนเว็บไซต์</p>
-    </div>
-    <div class="w3-third">
-      <i class="fa-regular fa-image fa-6x"></i>
-      <p class="w3-large">ทิวทัศน์</p>
-      <p>เว็บไซต์ของเรารวบรวมภาพถ่ายอวกาศที่สวยงามและน่าทึ่งจากหลากหลายภารกิจทางดาราศาสตร์
-        ท่องไปในความกว้างใหญ่ของจักรวาลและพบกับภาพถ่ายของดาวเคราะห์, ดวงดาว, และกาแล็กซีต่างๆ
-        เพลิดเพลินไปกับความงดงามของอวกาศ ทั้งภาพที่ถ่ายจากกล้องโทรทรรศน์และจากยานอวกาศ
-        สัมผัสความอัศจรรย์ของจักรวาลผ่านภาพถ่ายที่มีความละเอียดสูงและเต็มไปด้วยสีสันที่แท้จริง</p>
-    </div>
-    <div class="w3-third"> <!-- เปลี่ยนจาก w3-quarter เป็น w3-third -->
-      <i class="fa-solid fa-book fa-6x"></i>
-      <p class="w3-large">ความรู้เกี่ยวกับดาราศาสตร์</p>
-      <p>สำรวจความรู้เกี่ยวกับดาราศาสตร์ ตั้งแต่พื้นฐานจนถึงความรู้เชิงลึกของการสำรวจอวกาศ
-        เรียนรู้เกี่ยวกับระบบสุริยะ ดาวเคราะห์ ดวงดาว และปรากฏการณ์ต่างๆ ในจักรวาล
-        เรานำเสนอข้อมูลวิทยาศาสตร์อวกาศในรูปแบบที่เข้าใจง่าย เพื่อให้ทุกคนสามารถเรียนรู้ได้
-        ติดตามข่าวสารล่าสุดเกี่ยวกับการค้นพบใหม่ ๆ และความก้าวหน้าทางดาราศาสตร์ทั่วโลก</p>
-    </div>
-  </div>
-</div>
-
-
-<!-- กราฟความยอดนิยม -->
-<div class="w3-container" id="work">
-  <h3 class="w3-center">Website Visitor Popularity</h3>
-  <p class="w3-center w3-large">จำนวนผู้เข้าชมในแต่ละวันt</p>
-
-  <div class="chart-container">
-    <canvas id="popularityChart"></canvas>
-  </div>
-</div>
-
-<script>
-  // ข้อมูลจำนวนผู้เข้าชมในแต่ละวัน
-  const visitorData = {
-    labels: ['วันจันทร์', 'วันอังคาร', 'วันพุธ', 'วันพฤหัสบดี', 'วันศูกรื', 'วันเสาร์', 'วันอาทิตย์'],
-    datasets: [{
-      label: 'จำนวนผู้เข้าชม',
-      data: [120, 150, 180, 200, 170, 220, 250], // ข้อมูลจำนวนผู้เข้าชมในแต่ละวัน
-      backgroundColor: 'rgba(0, 0, 0, 0.8)',
-      borderColor: 'rgba(0, 0, 0, 1)',
-      borderWidth: 1
-    }]
-  };
-
-  // การตั้งค่าของกราฟ
-  const config = {
-    type: 'bar', // เปลี่ยนประเภทกราฟได้ เช่น 'line', 'pie'
-    data: visitorData,
-    options: {
-      scales: {
-        y: {
-          beginAtZero: true
-        }
-      }
-    }
-  };
-
-  // สร้างกราฟใน canvas ด้วย Chart.js
-  const popularityChart = new Chart(
-    document.getElementById('popularityChart'),
-    config
-  );
-</script>
-
-<!-- Book Section -->
-<div class="w3-container w3-center w3-grey" style="padding:60px 16px" id="books">
-  <h3>หนังสือดาราศาสตร์ที่น่าสนใจ</h3>
-  <p class="w3-large">เลือกหนังสือที่สนใจ</p>
-  <div class="w3-row-padding" style="margin-top:64px">
-    
-    <!-- Book 1 -->
-    <div class="w3-third w3-section">
-      <ul class="w3-ul w3-white w3-hover-">
-        <li class="w3-black w3-xlarge w3-padding-32">โลกดาราศาสตร์และอวกาศ ม.4</li>
-        <li class="w3-padding-16"><img src="book1.jpg" alt="Book 1" style="width:60%; height:300px;"></li>
-        <li class="w3-padding-16"><b>ราคา :</b> $300</li>
-        <li class="w3-light-grey w3-padding-24">
-          <button class="w3-button w3-black w3-padding-large" onclick="addToCart('โลกดาราศาสตร์และอวกาศ ม.4', 300)">ซื้อเดี๋ยวนี้เลย</button>
-        </li>
-      </ul>
-    </div>
-    
-    <!-- Book 2 -->
-    <div class="w3-third w3-section">
-      <ul class="w3-ul w3-white w3-hover-shadow">
-        <li class="w3-black w3-xlarge w3-padding-32">โลกดาราศาสตร์และอวกาศ เล่ม3</li>
-        <li class="w3-padding-16"><img src="book2.jpg" alt="Book 2" style="width:60%; height:300px;"></li>
-        <li class="w3-padding-16"><b>ราคา :</b> $400</li>
-        <li class="w3-light-grey w3-padding-24">
-          <button class="w3-button w3-black w3-padding-large" onclick="addToCart('โลกดาราศาสตร์และอวกาศ เล่ม 3', 400)">ซื้อเดี๋ยวนี้เลย</button>
-        </li>
-      </ul>
-    </div>
-
-    <!-- Book 3 -->
-    <div class="w3-third w3-section">
-      <ul class="w3-ul w3-white w3-hover-shadow">
-        <li class="w3-black w3-xlarge w3-padding-32">มหัสจรรย์มนุษย์กับดวงดาว</li>
-        <li class="w3-padding-16"><img src="book3.jpg" alt="Book 3" style="width:60%; height:300px;"></li>
-        <li class="w3-padding-16"><b>ราคา :</b> 350 บาท</li>
-        <li class="w3-light-grey w3-padding-24">
-          <button class="w3-button w3-black w3-padding-large" onclick="addToCart('มหัสจรรย์มนุษย์กับดวงดาว', 350)">ซื้อเดี๋ยวนี้เลย</button>
-        </li>
-      </ul>
-    </div>
-    
-  </div>  
-</div>
-
-<!-- Contact Section -->
-<div class="w3-container w3-light-grey" style="padding:60px 16px" id="contact">
-  <h3 class="w3-center"><b>CONTACT</b></h3>
-  <p class="w3-center w3-large">สามารถติดต่อทางเว็บไซตืได้ที่นี่</p>
-  <div style="margin-top:48px">
-    <p><i class="fa fa-phone fa-fw w3-xxlarge w3-margin-right"></i> Phone: 096223-xxxx</p>
-    <p><i class="fa fa-envelope fa-fw w3-xxlarge w3-margin-right"> </i> Email: 6520310138@psu.ac.th</p>
-    <p><i class="fa fa-map-marker fa-fw w3-xxlarge w3-margin-right"></i> อำเภอเมือง ตำบลรูสะมิแล จังหวัดปัตตานี 94160 </p>
-    <br>
-    <div id="map"></div>
-    <p id="location-info"></p>
-  </div>
-</div>
-
-<!-- Footer -->
-<footer class="w3-center w3-black w3-padding-64">
-  <a href="#home" class="w3-button w3-light-grey"><i class="fa fa-arrow-up w3-margin-right"></i>To the top</a>
-  <div class="w3-xlarge w3-section">
-  </div>
-  <p>Thank you</p>
-</footer>
- 
-<script>
-//แผนที่
-let map;
-let infoWindow;
-
-function initMap() {
-  map = new google.maps.Map(document.getElementById("map"), {
-    center: { lat: -34.397, lng: 150.644 },
-    zoom: 6,
-  });
-
-  infoWindow = new google.maps.InfoWindow();
-
-  if (navigator.geolocation) {
-    navigator.geolocation.getCurrentPosition(
-      (position) => {
-        const pos = {
-          lat: position.coords.latitude,
-          lng: position.coords.longitude,
-        };
-
-        // สร้าง Marker ที่ตำแหน่งปัจจุบันของผู้ใช้
-        const marker = new google.maps.Marker({
-          position: pos,
-          map: map,
-          title: "You are here!",
-        });
-
-        // แสดงตำแหน่งที่ตั้งปัจจุบันบนแผนที่
-        infoWindow.setPosition(pos);
-        infoWindow.setContent("Your current location.");
-        infoWindow.open(map);
-        map.setCenter(pos);
-      },
-      () => {
-        handleLocationError(true, infoWindow, map.getCenter());
-      }
-    );
-  } else {
-    handleLocationError(false, infoWindow, map.getCenter());
-  }
-
-  map.addListener("click", (event) => {
-    let lat = event.latLng.lat();
-    let lng = event.latLng.lng();
-    reverseGeocode(lat, lng);
-  });
-}
-
-function handleLocationError(browserHasGeolocation, infoWindow, pos) {
-  infoWindow.setPosition(pos);
-  infoWindow.setContent(
-    browserHasGeolocation
-      ? "Error: The Geolocation service failed."
-      : "Error: Your browser doesn't support geolocation."
-  );
-  infoWindow.open(map);
-}
-
-function reverseGeocode(lat, lng) {
-  const geocoder = new google.maps.Geocoder();
-  const latlng = { lat: parseFloat(lat), lng: parseFloat(lng) };
-
-  geocoder.geocode({ location: latlng }, (results, status) => {
-    if (status === "OK") {
-      if (results[0]) {
-        document.getElementById("location-info").innerText =
-          "Address: " + results[0].formatted_address;
-      } else {
-        document.getElementById("location-info").innerText =
-          "No results found";
-      }
-    } else {
-      document.getElementById("location-info").innerText =
-        "Geocoder failed due to: " + status;
-    }
-  });
-}
-
-// Modal Image Gallery
-function onClick(element) {
-  document.getElementById("img01").src = element.src;
-  document.getElementById("modal01").style.display = "block";
-  var captionText = document.getElementById("caption");
-  captionText.innerHTML = element.alt;
-}
-
-
-// Toggle between showing and hiding the sidebar when clicking the menu icon
-var mySidebar = document.getElementById("mySidebar");
-
-function w3_open() {
-  if (mySidebar.style.display === 'block') {
-    mySidebar.style.display = 'none';
-  } else {
-    mySidebar.style.display = 'block';
-  }
-}
-
-// Close the sidebar with the close button
-function w3_close() {
-    mySidebar.style.display = "none";
-}
-
-let slideIndex = 1;
-showSlides(slideIndex);
-
-// ปรับเปลี่ยนสไลด์
-function plusSlides(n) {
-  showSlides(slideIndex += n);
-}
-
-// แสดงผลสไลด์ที่เลือก
-function showSlides(n) {
-  let i;
-  let slides = document.getElementsByClassName("mySlides");
+  </header>
   
-  if (n > slides.length) {slideIndex = 1}    
-  if (n < 1) {slideIndex = slides.length}
-  
-  for (i = 0; i < slides.length; i++) {
-    slides[i].style.display = "none";  
-  }
-  
-  slides[slideIndex-1].style.display = "block";  
-}
-</script>
+  <main>
+    <section id="home" class="hero-section">
+      <div class="container hero-layout">
+        <div class="hero-content">
+          <p class="eyebrow">Explore the Universe</p>
+        <h1>Celestial</h1>
+        <p>เรียนรู้เกี่ยวกับระบบสุริยะ</p>
+          <div class="hero-actions">
+            <a href="#planets" class="primary-btn">เริ่มการสำรวจ <span>→</span></a>
+            <a href="#overview" class="play-link"><span>▶</span> ดูภาพรวม</a>
+          </div>
+        </div>
+      </div>
+    </section>
 
-<!-- เพิ่มตะกร้า -->
- <script>
+    <section id="overview" class="info-section">
+      <div class="container">
+        <h2>ระบบสุริยะคืออะไร</h2>
+          <p>ระบบสุริยะคือกลุ่มของวัตถุท้องฟ้าที่โคจรรอบดวงอาทิตย์ 
+            โดยมีดวงอาทิตย์เป็นศูนย์กลางและเป็นแหล่งพลังงานหลัก 
+            ภายในระบบสุริยะประกอบด้วยดาวเคราะห์ 8 ดวง 
+            ได้แก่ ดาวเคราะห์แคระ ดวงจันทร์จำนวนมาก ดาวเคราะห์น้อย ดาวหาง ก๊าซ ฝุ่น และวัตถุขนาดเล็กอื่น ๆ
+          </p>
+          <p>
+            ดาวเคราะห์ทั้ง 8 ดวงเรียงจากใกล้ดวงอาทิตย์ไปไกลที่สุด ได้แก่ 
+            ดาวพุธ ดาวศุกร์ โลก ดาวอังคาร ดาวพฤหัสบดี ดาวเสาร์ ดาวยูเรนัส และดาวเนปจูน
+          </p>
+      </div>
+    </section>
 
-// Function to add items to the cart
-function addToCart(productName, productPrice) {
-  let cart = JSON.parse(localStorage.getItem('cart')) || []; // อ่านข้อมูลตะกร้าจาก LocalStorage ถ้าไม่มีให้เริ่มต้นเป็น array ว่าง
-  cart.push({ name: productName, price: productPrice }); // เพิ่มสินค้าลงในตะกร้า
-  localStorage.setItem('cart', JSON.stringify(cart)); // บันทึกตะกร้าลงใน LocalStorage
-  alert(productName + ' ถูกเพิ่มลงในตะกร้า');}
+    <section id="planets" class="info-section">
+      <h2>ดาวเคราะห์ในระบบสุริยะ</h2>
+      <p>ระบบสุริยะมีดาวเคราะห์ 8 ดวง ได้แก่ เวเนซุลา, มาร์ส, โลก, จูพิเตอร์, ซัตเทิร์น, นิปเตอร์, อูรานัส และเนปจูน</p>
+        <div class="planet-list">
+          <article>
+            <h3>ดาวพุธ Mercury</h3>
+            <p>ดาวพุธเป็นดาวเคราะห์ที่อยู่ใกล้ดวงอาทิตย์ที่สุด และเป็นดาวเคราะห์ที่เล็กที่สุดในระบบสุริยะ 
+              พื้นผิวเต็มไปด้วยหลุมอุกกาบาตคล้ายดวงจันทร์ เพราะแทบไม่มีชั้นบรรยากาศคอยป้องกัน</p>
+            <img src="https://media.istockphoto.com/id/499771042/th/%E0%B8%A3%E0%B8%B9%E0%B8%9B%E0%B8%96%E0%B9%88%E0%B8%B2%E0%B8%A2/%E0%B8%9B%E0%B8%A3%E0%B8%AD%E0%B8%97%E0%B9%83%E0%B8%99%E0%B8%AA%E0%B8%B5.jpg?s=2048x2048&w=is&k=20&c=pTel6E1alFk_FAhF74nWe-vhrl5B66s7Gm6jt6kpa1s=" alt="Mercury Planet">
+          </article>
 
-  
+          <article>
+            <h3>ดาวศุกร์ Venus</h3>
+            <p>ดาวศุกร์เป็นดาวเคราะห์ที่ร้อนที่สุดในระบบสุริยะ เนื่องจากมีชั้นบรรยากาศที่หนาแน่นและประกอบด้วยก๊าซคาร์บอนไดออกไซด์มากมาย 
+              ทำให้เกิดปรากฏการณ์เรือนกระจกอย่างรุนแรง</p>
+              <img src="https://media.istockphoto.com/id/1164975682/th/%E0%B8%A3%E0%B8%B9%E0%B8%9B%E0%B8%96%E0%B9%88%E0%B8%B2%E0%B8%A2/%E0%B8%A0%E0%B8%B2%E0%B8%9E%E0%B8%94%E0%B8%B2%E0%B8%A7%E0%B8%A8%E0%B8%B8%E0%B8%81%E0%B8%A3%E0%B9%8C%E0%B9%83%E0%B8%99%E0%B8%AD%E0%B8%A7%E0%B8%81%E0%B8%B2%E0%B8%A8-3-%E0%B8%A1%E0%B8%B4%E0%B8%95%E0%B8%B4.jpg?s=2048x2048&w=is&k=20&c=u1w--BnaEaLoVF8Mym-Bb8LL8dA0OxiElWcjIuESzFk=" alt="Venus Planet">
+          </article>
 
- </script>
+          <article>
+            <h3>โลก Earth</h3>
+            <p>โลกเป็นดาวเคราะห์ที่มีชั้นบรรยากาศที่หนาแน่น ทำให้มีอุณหภูมิที่สามารถใช้ในการเจริญเติบโตของชีวิตได้ 
+              มีน้ำในรูปแบบของเหลวบนพื้นผิว และมีสิ่งมีชีวิตหลากหลายชนิดอาศัยอยู่</p>
+              <img src="https://media.istockphoto.com/id/2226101114/th/%E0%B8%A3%E0%B8%B9%E0%B8%9B%E0%B8%96%E0%B9%88%E0%B8%B2%E0%B8%A2/%E0%B8%94%E0%B8%B2%E0%B8%A7%E0%B9%80%E0%B8%84%E0%B8%A3%E0%B8%B2%E0%B8%B0%E0%B8%AB%E0%B9%8C%E0%B9%82%E0%B8%A5%E0%B8%81%E0%B8%AA%E0%B8%B5%E0%B8%99%E0%B9%89%E0%B9%8D%E0%B8%B2%E0%B9%80%E0%B8%87%E0%B8%B4%E0%B8%99%E0%B9%81%E0%B8%A5%E0%B8%B0%E0%B8%AA%E0%B8%B5%E0%B9%80%E0%B8%82%E0%B8%B5%E0%B8%A2%E0%B8%A7%E0%B8%97%E0%B8%B5%E0%B9%88%E0%B8%A1%E0%B8%B5%E0%B8%88%E0%B8%B8%E0%B8%94%E0%B8%AA%E0%B8%B5%E0%B8%82%E0%B8%B2%E0%B8%A7%E0%B8%AD%E0%B8%A2%E0%B8%B9%E0%B9%88.jpg?s=2048x2048&w=is&k=20&c=fEyUcaUk1f0T3y9fEaaJP0tXCDqiNIRgvc1u_d04ulc=" alt="Earth Planet">
+            </article>
 
+          <article>
+            <h3>ดาวอังคาร Mars</h3>
+            <p>ดาวอังคารมักถูกเรียกว่า “ดาวเคราะห์สีแดง” เพราะพื้นผิวมีฝุ่นและแร่เหล็กออกไซด์ 
+              มีภูเขาไฟขนาดใหญ่ หุบเขายาว และเป็นหนึ่งในดาวที่มนุษย์สนใจสำรวจมากที่สุด</p>
+              <img src="https://media.istockphoto.com/id/2263081454/th/%E0%B8%A3%E0%B8%B9%E0%B8%9B%E0%B8%96%E0%B9%88%E0%B8%B2%E0%B8%A2/%E0%B8%A1%E0%B8%B8%E0%B8%A1%E0%B8%A1%E0%B8%AD%E0%B8%87%E0%B9%81%E0%B8%9A%E0%B8%9A%E0%B9%80%E0%B8%95%E0%B9%87%E0%B8%A1%E0%B8%82%E0%B8%AD%E0%B8%87%E0%B8%94%E0%B8%B2%E0%B8%A7%E0%B8%AD%E0%B8%B1%E0%B8%87%E0%B8%84%E0%B8%B2%E0%B8%A3%E0%B8%94%E0%B8%B2%E0%B8%A7%E0%B9%80%E0%B8%84%E0%B8%A3%E0%B8%B2%E0%B8%B0%E0%B8%AB%E0%B9%8C%E0%B8%AA%E0%B8%B5%E0%B9%81%E0%B8%94%E0%B8%87%E0%B9%83%E0%B8%99%E0%B8%97%E0%B8%B5%E0%B9%88%E0%B8%A1%E0%B8%B7%E0%B8%94.jpg?s=2048x2048&w=is&k=20&c=BYchP6MQALg13HJkvKgk_lK7278849nNILHzN6iN4WU=" alt="Mars Planet">
+            </article>
+
+          <article>
+            <h3>ดาวพฤหัสบดี Jupiter</h3>
+            <p>ดาวพฤหัสบดีเป็นดาวเคราะห์ที่ใหญ่ที่สุดในระบบสุริยะ เป็นดาวแก๊สยักษ์ 
+              ไม่มีพื้นผิวแข็งแบบโลก จุดเด่นคือพายุขนาดใหญ่ที่เรียกว่า Great Red Spot และมีดวงจันทร์จำนวนมาก</p>
+            <img src="https://plus.unsplash.com/premium_photo-1719104087061-6f73947c4c43?q=80&w=900&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Jupiter Planet">
+            </article>
+
+          <article>
+            <h3>ดาวเสาร์ Saturn</h3>
+            <p>ดาวเสาร์เป็นดาวเคราะห์ที่มีวงแหวนที่สวยงามและโดดเด่นที่สุดในระบบสุริยะ 
+              วงแหวนประกอบด้วยน้ำแข็งและเศษหินขนาดเล็ก มีดวงจันทร์จำนวนมากเช่นกัน</p>
+            <img src="https://media.istockphoto.com/id/1824387352/th/%E0%B8%A3%E0%B8%B9%E0%B8%9B%E0%B8%96%E0%B9%88%E0%B8%B2%E0%B8%A2/%E0%B8%94%E0%B8%B2%E0%B8%A7%E0%B9%80%E0%B8%84%E0%B8%A3%E0%B8%B2%E0%B8%B0%E0%B8%AB%E0%B9%8C%E0%B8%94%E0%B8%B2%E0%B8%A7%E0%B9%80%E0%B8%AA%E0%B8%B2%E0%B8%A3%E0%B9%8C-%E0%B9%83%E0%B8%99%E0%B8%84%E0%B8%A7%E0%B8%B2%E0%B8%A1%E0%B8%A5%E0%B8%B6%E0%B8%81%E0%B8%97%E0%B8%B5%E0%B9%88%E0%B8%99%E0%B8%B8%E0%B9%88%E0%B8%A1%E0%B8%99%E0%B8%A7%E0%B8%A5%E0%B8%82%E0%B8%AD%E0%B8%87%E0%B8%AD%E0%B8%A7%E0%B8%81%E0%B8%B2%E0%B8%A8%E0%B8%94%E0%B8%B2%E0%B8%A7%E0%B9%80%E0%B8%AA%E0%B8%B2%E0%B8%A3%E0%B9%8C%E0%B8%A2%E0%B8%B1%E0%B8%81%E0%B8%A9%E0%B9%8C%E0%B8%A7%E0%B8%87%E0%B9%81%E0%B8%AB%E0%B8%A7%E0%B8%99%E0%B8%AD%E0%B8%B1%E0%B8%99%E0%B8%87%E0%B8%94%E0%B8%87%E0%B8%B2%E0%B8%A1%E0%B9%80%E0%B8%95%E0%B9%89%E0%B8%99%E0%B8%A3%E0%B9%8D%E0%B8%B2%E0%B9%83%E0%B8%99%E0%B8%9A%E0%B8%B1%E0%B8%A5%E0%B9%80.jpg?s=2048x2048&w=is&k=20&c=6Agn3DNtGaDRV_Psc02ept4UlLChJ6ZpKIwxZNCecUE=" alt="Saturn Planet">
+          </article>
+
+          <article>
+            <h3>ดาวยูเรนัส Uranus</h3>
+            <p>ดาวยูเรนัสเป็นดาวเคราะห์น้ำแข็งยักษ์ มีสีฟ้าอมเขียวจากก๊าซมีเทนในชั้นบรรยากาศ จุดเด่นคือแกนหมุนเอียงมาก 
+              ทำให้ดูเหมือนหมุนตะแคงเมื่อเทียบกับดาวเคราะห์ดวงอื่น</p>
+            <img src="https://media.istockphoto.com/id/1199283538/th/%E0%B8%A3%E0%B8%B9%E0%B8%9B%E0%B8%96%E0%B9%88%E0%B8%B2%E0%B8%A2/%E0%B8%94%E0%B8%B2%E0%B8%A7%E0%B8%A2%E0%B8%B9%E0%B9%80%E0%B8%A3%E0%B8%99%E0%B8%B1%E0%B8%AA.jpg?s=2048x2048&w=is&k=20&c=jvQpThFd4TUhDzCXkDXkPkV36-Ap1t68Ro5gXTW8cgQ=" alt="Uranus Planet">
+          </article>
+
+          <article>
+            <h3>ดาวเนปจูน Neptune</h3>
+            <p>ดาวเนปจูนเป็นดาวเคราะห์ที่อยู่ไกลจากดวงอาทิตย์ที่สุดในบรรดาดาวเคราะห์ทั้ง 8 ดวง 
+              เป็นดาวเคราะห์น้ำแข็งยักษ์ มีสีน้ำเงินเข้ม และมีลมที่รุนแรงมาก</p>
+            <img src="https://media.istockphoto.com/id/2236153571/th/%E0%B8%A3%E0%B8%B9%E0%B8%9B%E0%B8%96%E0%B9%88%E0%B8%B2%E0%B8%A2/%E0%B8%94%E0%B8%B2%E0%B8%A7%E0%B9%80%E0%B8%99%E0%B8%9B%E0%B8%88%E0%B8%B9%E0%B8%99%E0%B8%9A%E0%B8%99%E0%B8%AA%E0%B8%B5%E0%B8%94%E0%B9%8D%E0%B8%B2%E0%B9%82%E0%B8%94%E0%B8%94%E0%B9%80%E0%B8%94%E0%B8%B5%E0%B9%88%E0%B8%A2%E0%B8%A7.jpg?s=2048x2048&w=is&k=20&c=5CW1au8dZGpBKQgdfru56Tcn4PIzSfnMbBEwLeuLrdg=" alt="Neptune Planet">
+          </article>
+        </div>
+    </section>
+
+    <section id="facts" class="info-section">
+      <h2>ข้อเท็จจริงเกี่ยวกับระบบสุริยะ</h2>
+        <ul class="facts-list">
+          <li>ระบบสุริยะมีดาวเคราะห์ 8 ดวง และดาวเคราะห์แคระที่ได้รับการยอมรับอย่างเป็นทางการ 5 ดวง 
+            ได้แก่ Ceres, Pluto, Haumea, Makemake และ Eris</li>
+          <li>ดวงอาทิตย์เป็นดาวฤกษ์เพียงดวงเดียวในระบบสุริยะ และแรงโน้มถ่วงของมันช่วยยึดดาวเคราะห์และวัตถุต่าง ๆ 
+              ให้โคจรรอบมัน</li>
+          <li>ดาวพฤหัสบดีเป็นดาวเคราะห์ที่ใหญ่ที่สุดในระบบสุริยะ</li>
+          <li>ดาวพุธเป็นดาวเคราะห์ที่เล็กที่สุดและอยู่ใกล้ดวงอาทิตย์ที่สุด</li>
+          <li>ดาวเนปจูนเป็นดาวเคราะห์ที่อยู่ไกลดวงอาทิตย์ที่สุด</li>
+          <li>ดาวเคราะห์ชั้นใน 4 ดวง ได้แก่ ดาวพุธ ดาวศุกร์ โลก และดาวอังคาร เป็นดาวเคราะห์หิน</li>
+          <li>ดาวเคราะห์ชั้นนอก 4 ดวง ได้แก่ ดาวพฤหัสบดี ดาวเสาร์ ดาวยูเรนัส และดาวเนปจูน เป็นดาวเคราะห์ยักษ์</li>
+          <li>ดาวเสาร์มีวงแหวนที่เด่นชัดที่สุด แต่ดาวเคราะห์ยักษ์ดวงอื่นก็มีวงแหวนเช่นกัน</li>
+          <li>ปัจจุบัน โลกเป็นดาวเคราะห์เพียงดวงเดียวที่เรารู้ว่ามีสิ่งมีชีวิต</li>
+          <li>ระบบสุริยะไม่ได้จบแค่ดาวเนปจูน แต่ยังมีบริเวณไกลออกไป เช่น Kuiper Belt และ Oort Cloud</li>
+        </ul>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Celestarial. All rights reserved.</p>
+  </footer>
+  <script src="javascript/main.js"></script>
 </body>
 </html>
